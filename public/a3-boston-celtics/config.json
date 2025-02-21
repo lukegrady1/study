@@ -1,0 +1,1050 @@
+{
+    "$schema": "https://raw.githubusercontent.com/reVISit-studies/study/main/src/parser/StudyConfigSchema.json",
+    "studyMetadata": {
+      "title": "A3 Boston Celtics",
+      "version": "pilot",
+      "authors": ["Dylan Grady and Luke Grady"],
+      "date": "2025-02-20",
+      "description": "A Chart Perception Study",
+      "organizations": ["WPI"]
+    },
+    "uiConfig": {
+      "contactEmail": "",
+      "helpTextPath": "a3-boston-celtics/assets/help.md",
+      "logoPath": "revisitAssets/revisitLogoSquare.svg",
+      "withProgressBar": true,
+      "autoDownloadStudy": false,
+      "sidebar": true
+    },
+    "baseComponents": {
+      "barChart": {
+        "meta": {
+          "difficulty": 5,
+          "chart": "Bar"
+        },
+        "description": "A bar chart",
+        "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
+        "type": "react-component",
+        "path": "example-cleveland/assets/BarChart.tsx",
+        "response": [
+          {
+            "id": "cm-response",
+            "prompt": "Answer:",
+            "location": "belowStimulus",
+            "type": "numerical",
+            "placeholder": "0-100",
+            "max": 100,
+            "min": 0
+          }
+        ],
+        "provideFeedback": false,
+        "nextButtonLocation": "belowStimulus",
+        "instructionLocation": "sidebar"
+      },
+      "pieChart": {
+        "meta": {
+          "difficulty": 5,
+          "chart": "pie"
+        },
+        "description": "A pie chart",
+        "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
+        "type": "react-component",
+        "path": "example-cleveland/assets/PieChart.tsx",
+        "response": [
+          {
+            "id": "cm-response",
+            "prompt": "Answer:",
+            "location": "belowStimulus",
+            "type": "numerical",
+            "placeholder": "0-100",
+            "max": 100,
+            "min": 0
+          }
+        ],
+        "provideFeedback": false,
+        "nextButtonLocation": "belowStimulus",
+        "instructionLocation": "sidebar"
+      },
+      "stackedBarChart": {
+        "meta": {
+          "difficulty": 5,
+          "chart": "stacked bar"
+        },
+        "description": "A stacked bar chart",
+        "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
+        "type": "react-component",
+        "path": "example-cleveland/assets/StackedBarChart.tsx",
+        "response": [
+          {
+            "id": "cm-response",
+            "prompt": "Answer:",
+            "location": "belowStimulus",
+            "type": "numerical",
+            "placeholder": "0-100",
+            "max": 100,
+            "min": 0
+          }
+        ],
+        "provideFeedback": false,
+        "nextButtonLocation": "belowStimulus",
+        "instructionLocation": "sidebar"
+      }
+    },
+    "components": {
+      "introduction": {
+        "type": "markdown",
+        "path": "a3-boston-celtics/assets/introduction.md",
+        "response": [
+          {
+            "id": "q1-name",
+            "prompt": "What is your First and Last Name?",
+            "required": true,
+            "location": "belowStimulus",
+            "type": "shortText",
+            "placeholder": "First and Last Name"
+          }
+        ]
+      },
+      "training1": {
+        "type": "markdown",
+        "path": "a3-boston-celtics/assets/training.md",
+        "response": []
+      },
+  
+      "bar-chart-1": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "14" },
+            { "name": "B", "value": "46" },
+            { "name": "C", "value": "77" },
+            { "name": "D", "value": "8" },
+            { "name": "E", "value": "54" }
+          ],
+          "selectedIndices": [2, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 10 }]
+      },
+      "bar-chart-2": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "53" },
+            { "name": "B", "value": "93" },
+            { "name": "C", "value": "23" },
+            { "name": "D", "value": "100" },
+            { "name": "E", "value": "82" }
+          ],
+          "selectedIndices": [3, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 93 }]
+      },
+      "bar-chart-3": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "67" },
+            { "name": "B", "value": "80" },
+            { "name": "C", "value": "98" },
+            { "name": "D", "value": "87" },
+            { "name": "E", "value": "55" }
+          ],
+          "selectedIndices": [3, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 89 }]
+      },
+      "bar-chart-4": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "64" },
+            { "name": "B", "value": "77" },
+            { "name": "C", "value": "36" },
+            { "name": "D", "value": "3" },
+            { "name": "E", "value": "33" }
+          ],
+          "selectedIndices": [4, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 92 }]
+      },
+      "bar-chart-5": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "56" },
+            { "name": "B", "value": "45" },
+            { "name": "C", "value": "33" },
+            { "name": "D", "value": "77" },
+            { "name": "E", "value": "39" }
+          ],
+          "selectedIndices": [3, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 50 }]
+      },
+      "bar-chart-6": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "31" },
+            { "name": "B", "value": "58" },
+            { "name": "C", "value": "24" },
+            { "name": "D", "value": "57" },
+            { "name": "E", "value": "67" }
+          ],
+          "selectedIndices": [0, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 77 }]
+      },
+      "bar-chart-7": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "15" },
+            { "name": "B", "value": "63" },
+            { "name": "C", "value": "80" },
+            { "name": "D", "value": "39" },
+            { "name": "E", "value": "21" }
+          ],
+          "selectedIndices": [1, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 33 }]
+      },
+      "bar-chart-8": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "7" },
+            { "name": "B", "value": "9" },
+            { "name": "C", "value": "28" },
+            { "name": "D", "value": "4" },
+            { "name": "E", "value": "27" }
+          ],
+          "selectedIndices": [1, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 32 }]
+      },
+      "bar-chart-9": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "98" },
+            { "name": "B", "value": "36" },
+            { "name": "C", "value": "33" },
+            { "name": "D", "value": "68" },
+            { "name": "E", "value": "61" }
+          ],
+          "selectedIndices": [3, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 90 }]
+      },
+      "bar-chart-10": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "24" },
+            { "name": "B", "value": "26" },
+            { "name": "C", "value": "13" },
+            { "name": "D", "value": "19" },
+            { "name": "E", "value": "51" }
+          ],
+          "selectedIndices": [2, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 68 }]
+      },
+      "bar-chart-11": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "57" },
+            { "name": "B", "value": "97" },
+            { "name": "C", "value": "64" },
+            { "name": "D", "value": "27" },
+            { "name": "E", "value": "96" }
+          ],
+          "selectedIndices": [0, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 89 }]
+      },
+      "bar-chart-12": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "77" },
+            { "name": "B", "value": "42" },
+            { "name": "C", "value": "52" },
+            { "name": "D", "value": "47" },
+            { "name": "E", "value": "29" }
+          ],
+          "selectedIndices": [1, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 69 }]
+      },
+      "bar-chart-13": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "78" },
+            { "name": "B", "value": "68" },
+            { "name": "C", "value": "84" },
+            { "name": "D", "value": "4" },
+            { "name": "E", "value": "38" }
+          ],
+          "selectedIndices": [0, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 87 }]
+      },
+      "bar-chart-14": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "52" },
+            { "name": "B", "value": "33" },
+            { "name": "C", "value": "100" },
+            { "name": "D", "value": "42" },
+            { "name": "E", "value": "77" }
+          ],
+          "selectedIndices": [3, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 81 }]
+      },
+      "bar-chart-15": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "100" },
+            { "name": "B", "value": "36" },
+            { "name": "C", "value": "4" },
+            { "name": "D", "value": "33" },
+            { "name": "E", "value": "74" }
+          ],
+          "selectedIndices": [2, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 5 }]
+      },
+      "bar-chart-16": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "89" },
+            { "name": "B", "value": "62" },
+            { "name": "C", "value": "59" },
+            { "name": "D", "value": "36" },
+            { "name": "E", "value": "90" }
+          ],
+          "selectedIndices": [0, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 70 }]
+      },
+      "bar-chart-17": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "97" },
+            { "name": "B", "value": "2" },
+            { "name": "C", "value": "8" },
+            { "name": "D", "value": "41" },
+            { "name": "E", "value": "26" }
+          ],
+          "selectedIndices": [2, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 20 }]
+      },
+      "bar-chart-18": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "28" },
+            { "name": "B", "value": "11" },
+            { "name": "C", "value": "13" },
+            { "name": "D", "value": "29" },
+            { "name": "E", "value": "87" }
+          ],
+          "selectedIndices": [3, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 33 }]
+      },
+      "bar-chart-19": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "33" },
+            { "name": "B", "value": "38" },
+            { "name": "C", "value": "16" },
+            { "name": "D", "value": "71" },
+            { "name": "E", "value": "14" }
+          ],
+          "selectedIndices": [4, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 88 }]
+      },
+      "bar-chart-20": {
+        "baseComponent": "barChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "59" },
+            { "name": "B", "value": "38" },
+            { "name": "C", "value": "70" },
+            { "name": "D", "value": "84" },
+            { "name": "E", "value": "80" }
+          ],
+          "selectedIndices": [2, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 54 }]
+      },
+  
+      "pie-chart-1": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "31" },
+            { "name": "B", "value": "23" },
+            { "name": "C", "value": "85" },
+            { "name": "D", "value": "98" },
+            { "name": "E", "value": "20" }
+          ],
+          "selectedIndices": [2, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 36 }]
+      },
+      "pie-chart-2": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "53" },
+            { "name": "B", "value": "51" },
+            { "name": "C", "value": "87" },
+            { "name": "D", "value": "66" },
+            { "name": "E", "value": "35" }
+          ],
+          "selectedIndices": [0, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 66 }]
+      },
+      "pie-chart-3": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "53" },
+            { "name": "B", "value": "55" },
+            { "name": "C", "value": "97" },
+            { "name": "D", "value": "60" },
+            { "name": "E", "value": "67" }
+          ],
+          "selectedIndices": [2, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 69 }]
+      },
+      "pie-chart-4": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "94" },
+            { "name": "B", "value": "49" },
+            { "name": "C", "value": "26" },
+            { "name": "D", "value": "82" },
+            { "name": "E", "value": "58" }
+          ],
+          "selectedIndices": [0, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 87 }]
+      },
+      "pie-chart-5": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "82" },
+            { "name": "B", "value": "46" },
+            { "name": "C", "value": "25" },
+            { "name": "D", "value": "28" },
+            { "name": "E", "value": "82" }
+          ],
+          "selectedIndices": [4, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 56 }]
+      },
+      "pie-chart-6": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "49" },
+            { "name": "B", "value": "19" },
+            { "name": "C", "value": "80" },
+            { "name": "D", "value": "76" },
+            { "name": "E", "value": "70" }
+          ],
+          "selectedIndices": [3, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 64 }]
+      },
+      "pie-chart-7": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "74" },
+            { "name": "B", "value": "42" },
+            { "name": "C", "value": "68" },
+            { "name": "D", "value": "91" },
+            { "name": "E", "value": "38" }
+          ],
+          "selectedIndices": [1, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 62 }]
+      },
+  
+      "pie-chart-8": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "92" },
+            { "name": "B", "value": "8" },
+            { "name": "C", "value": "3" },
+            { "name": "D", "value": "42" },
+            { "name": "E", "value": "77" }
+          ],
+          "selectedIndices": [3, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 7 }]
+      },
+      "pie-chart-9": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "57" },
+            { "name": "B", "value": "65" },
+            { "name": "C", "value": "2" },
+            { "name": "D", "value": "93" },
+            { "name": "E", "value": "39" }
+          ],
+          "selectedIndices": [4, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 42 }]
+      },
+      "pie-chart-10": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "38" },
+            { "name": "B", "value": "87" },
+            { "name": "C", "value": "39" },
+            { "name": "D", "value": "52" },
+            { "name": "E", "value": "11" }
+          ],
+          "selectedIndices": [0, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 29 }]
+      },
+      "pie-chart-11": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "22" },
+            { "name": "B", "value": "93" },
+            { "name": "C", "value": "67" },
+            { "name": "D", "value": "16" },
+            { "name": "E", "value": "94" }
+          ],
+          "selectedIndices": [3, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 73 }]
+      },
+      "pie-chart-12": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "65" },
+            { "name": "B", "value": "52" },
+            { "name": "C", "value": "62" },
+            { "name": "D", "value": "91" },
+            { "name": "E", "value": "57" }
+          ],
+          "selectedIndices": [0, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 88 }]
+      },
+      "pie-chart-13": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "46" },
+            { "name": "B", "value": "55" },
+            { "name": "C", "value": "72" },
+            { "name": "D", "value": "47" },
+            { "name": "E", "value": "65" }
+          ],
+          "selectedIndices": [3, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 65 }]
+      },
+      "pie-chart-14": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "67" },
+            { "name": "B", "value": "81" },
+            { "name": "C", "value": "84" },
+            { "name": "D", "value": "62" },
+            { "name": "E", "value": "97" }
+          ],
+          "selectedIndices": [3, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 74 }]
+      },
+      "pie-chart-15": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "40" },
+            { "name": "B", "value": "70" },
+            { "name": "C", "value": "64" },
+            { "name": "D", "value": "46" },
+            { "name": "E", "value": "27" }
+          ],
+          "selectedIndices": [3, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 87 }]
+      },
+      "pie-chart-16": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "57" },
+            { "name": "B", "value": "31" },
+            { "name": "C", "value": "71" },
+            { "name": "D", "value": "8" },
+            { "name": "E", "value": "65" }
+          ],
+          "selectedIndices": [1, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 54 }]
+      },
+  
+      "pie-chart-17": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "44" },
+            { "name": "B", "value": "75" },
+            { "name": "C", "value": "2" },
+            { "name": "D", "value": "74" },
+            { "name": "E", "value": "89" }
+          ],
+          "selectedIndices": [0, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 59 }]
+      },
+      "pie-chart-18": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "50" },
+            { "name": "B", "value": "3" },
+            { "name": "C", "value": "43" },
+            { "name": "D", "value": "65" },
+            { "name": "E", "value": "86" }
+          ],
+          "selectedIndices": [0, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 6 }]
+      },
+  
+      "pie-chart-19": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "85" },
+            { "name": "B", "value": "6" },
+            { "name": "C", "value": "1" },
+            { "name": "D", "value": "32" },
+            { "name": "E", "value": "93" }
+          ],
+          "selectedIndices": [4, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 34 }]
+      },
+      "pie-chart-20": {
+        "baseComponent": "pieChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "58" },
+            { "name": "B", "value": "37" },
+            { "name": "C", "value": "94" },
+            { "name": "D", "value": "98" },
+            { "name": "E", "value": "13" }
+          ],
+          "selectedIndices": [4, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 14 }]
+      },
+  
+      "stacked-bar-chart-1": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "13" },
+            { "name": "B", "value": "42" },
+            { "name": "C", "value": "5" },
+            { "name": "D", "value": "61" },
+            { "name": "E", "value": "25" }
+          ],
+          "selectedIndices": [1, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 60 }]
+      },
+      "stacked-bar-chart-2": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "17" },
+            { "name": "B", "value": "41" },
+            { "name": "C", "value": "49" },
+            { "name": "D", "value": "57" },
+            { "name": "E", "value": "98" }
+          ],
+          "selectedIndices": [0, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 17 }]
+      },
+      "stacked-bar-chart-3": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "5" },
+            { "name": "B", "value": "24" },
+            { "name": "C", "value": "34" },
+            { "name": "D", "value": "73" },
+            { "name": "E", "value": "79" }
+          ],
+          "selectedIndices": [4, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 6 }]
+      },
+      "stacked-bar-chart-4": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "66" },
+            { "name": "B", "value": "54" },
+            { "name": "C", "value": "26" },
+            { "name": "D", "value": "14" },
+            { "name": "E", "value": "44" }
+          ],
+          "selectedIndices": [1, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 81 }]
+      },
+      "stacked-bar-chart-5": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "93" },
+            { "name": "B", "value": "8" },
+            { "name": "C", "value": "27" },
+            { "name": "D", "value": "21" },
+            { "name": "E", "value": "6" }
+          ],
+          "selectedIndices": [4, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 6 }]
+      },
+      "stacked-bar-chart-6": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "29" },
+            { "name": "B", "value": "54" },
+            { "name": "C", "value": "48" },
+            { "name": "D", "value": "56" },
+            { "name": "E", "value": "49" }
+          ],
+          "selectedIndices": [1, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 92 }]
+      },
+      "stacked-bar-chart-7": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "90" },
+            { "name": "B", "value": "47" },
+            { "name": "C", "value": "83" },
+            { "name": "D", "value": "3" },
+            { "name": "E", "value": "79" }
+          ],
+          "selectedIndices": [0, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 92 }]
+      },
+      "stacked-bar-chart-8": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "49" },
+            { "name": "B", "value": "57" },
+            { "name": "C", "value": "27" },
+            { "name": "D", "value": "53" },
+            { "name": "E", "value": "7" }
+          ],
+          "selectedIndices": [3, 0]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 92 }]
+      },
+      "stacked-bar-chart-9": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "53" },
+            { "name": "B", "value": "82" },
+            { "name": "C", "value": "67" },
+            { "name": "D", "value": "91" },
+            { "name": "E", "value": "24" }
+          ],
+          "selectedIndices": [0, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 65 }]
+      },
+      "stacked-bar-chart-10": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "36" },
+            { "name": "B", "value": "12" },
+            { "name": "C", "value": "87" },
+            { "name": "D", "value": "71" },
+            { "name": "E", "value": "66" }
+          ],
+          "selectedIndices": [3, 1]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 17 }]
+      },
+      "stacked-bar-chart-11": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "40" },
+            { "name": "B", "value": "31" },
+            { "name": "C", "value": "75" },
+            { "name": "D", "value": "12" },
+            { "name": "E", "value": "72" }
+          ],
+          "selectedIndices": [2, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 16 }]
+      },
+      "stacked-bar-chart-12": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "16" },
+            { "name": "B", "value": "79" },
+            { "name": "C", "value": "22" },
+            { "name": "D", "value": "52" },
+            { "name": "E", "value": "6" }
+          ],
+          "selectedIndices": [1, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 28 }]
+      },
+      "stacked-bar-chart-13": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "62" },
+            { "name": "B", "value": "49" },
+            { "name": "C", "value": "80" },
+            { "name": "D", "value": "6" },
+            { "name": "E", "value": "63" }
+          ],
+          "selectedIndices": [1, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 61 }]
+      },
+      "stacked-bar-chart-14": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "55" },
+            { "name": "B", "value": "86" },
+            { "name": "C", "value": "73" },
+            { "name": "D", "value": "65" },
+            { "name": "E", "value": "61" }
+          ],
+          "selectedIndices": [1, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 76 }]
+      },
+      "stacked-bar-chart-15": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "83" },
+            { "name": "B", "value": "32" },
+            { "name": "C", "value": "95" },
+            { "name": "D", "value": "58" },
+            { "name": "E", "value": "69" }
+          ],
+          "selectedIndices": [1, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 55 }]
+      },
+      "stacked-bar-chart-16": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "98" },
+            { "name": "B", "value": "41" },
+            { "name": "C", "value": "33" },
+            { "name": "D", "value": "33" },
+            { "name": "E", "value": "49" }
+          ],
+          "selectedIndices": [3, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 100 }]
+      },
+      "stacked-bar-chart-17": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "65" },
+            { "name": "B", "value": "76" },
+            { "name": "C", "value": "18" },
+            { "name": "D", "value": "70" },
+            { "name": "E", "value": "85" }
+          ],
+          "selectedIndices": [1, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 89 }]
+      },
+      "stacked-bar-chart-18": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "6" },
+            { "name": "B", "value": "92" },
+            { "name": "C", "value": "100" },
+            { "name": "D", "value": "46" },
+            { "name": "E", "value": "23" }
+          ],
+          "selectedIndices": [0, 4]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 26 }]
+      },
+      "stacked-bar-chart-19": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "62" },
+            { "name": "B", "value": "56" },
+            { "name": "C", "value": "57" },
+            { "name": "D", "value": "49" },
+            { "name": "E", "value": "84" }
+          ],
+          "selectedIndices": [4, 3]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 58 }]
+      },
+      "stacked-bar-chart-20": {
+        "baseComponent": "stackedBarChart",
+        "parameters": {
+          "data": [
+            { "name": "A", "value": "9" },
+            { "name": "B", "value": "98" },
+            { "name": "C", "value": "32" },
+            { "name": "D", "value": "23" },
+            { "name": "E", "value": "30" }
+          ],
+          "selectedIndices": [4, 2]
+        },
+        "correctAnswer": [{ "id": "cm-response", "answer": 94 }]
+      }
+    },
+    "sequence": {
+      "order": "fixed",
+      "components": [
+        "introduction",
+        "training1",
+        {
+          "order": "random",
+          "components": [
+            {
+              "order": "latinSquare",
+              "numSamples": 4,
+              "components": [
+                "bar-chart-1",
+                "bar-chart-2",
+                "bar-chart-3",
+                "bar-chart-4",
+                "bar-chart-5",
+                "bar-chart-6",
+                "bar-chart-7",
+                "bar-chart-8",
+                "bar-chart-9",
+                "bar-chart-10",
+                "bar-chart-11",
+                "bar-chart-12",
+                "bar-chart-13",
+                "bar-chart-14",
+                "bar-chart-15",
+                "bar-chart-16",
+                "bar-chart-17",
+                "bar-chart-18",
+                "bar-chart-19",
+                "bar-chart-20"
+              ]
+            },
+            {
+              "order": "latinSquare",
+              "numSamples": 4,
+              "components": [
+                "pie-chart-1",
+                "pie-chart-2",
+                "pie-chart-3",
+                "pie-chart-4",
+                "pie-chart-5",
+                "pie-chart-6",
+                "pie-chart-7",
+                "pie-chart-8",
+                "pie-chart-9",
+                "pie-chart-10",
+                "pie-chart-11",
+                "pie-chart-12",
+                "pie-chart-13",
+                "pie-chart-14",
+                "pie-chart-15",
+                "pie-chart-16",
+                "pie-chart-17",
+                "pie-chart-18",
+                "pie-chart-19",
+                "pie-chart-20"
+              ]
+            },
+            {
+              "order": "latinSquare",
+              "numSamples": 4,
+              "components": [
+                "stacked-bar-chart-1",
+                "stacked-bar-chart-2",
+                "stacked-bar-chart-3",
+                "stacked-bar-chart-4",
+                "stacked-bar-chart-5",
+                "stacked-bar-chart-6",
+                "stacked-bar-chart-7",
+                "stacked-bar-chart-8",
+                "stacked-bar-chart-9",
+                "stacked-bar-chart-10",
+                "stacked-bar-chart-11",
+                "stacked-bar-chart-12",
+                "stacked-bar-chart-13",
+                "stacked-bar-chart-14",
+                "stacked-bar-chart-15",
+                "stacked-bar-chart-16",
+                "stacked-bar-chart-17",
+                "stacked-bar-chart-18",
+                "stacked-bar-chart-19",
+                "stacked-bar-chart-20"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
