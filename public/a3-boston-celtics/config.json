@@ -65,15 +65,15 @@
         "nextButtonLocation": "belowStimulus",
         "instructionLocation": "sidebar"
       },
-      "stackedBarChart": {
+      "bubbleChart": {
         "meta": {
           "difficulty": 5,
-          "chart": "stacked bar"
+          "chart": "bubble chart"
         },
-        "description": "A stacked bar chart",
+        "description": "A bubble chart",
         "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
         "type": "react-component",
-        "path": "example-cleveland/assets/StackedBarChart.tsx",
+        "path": "example-cleveland/assets/BubbleChart.tsx",
         "response": [
           {
             "id": "cm-response",
@@ -104,11 +104,6 @@
             "placeholder": "First and Last Name"
           }
         ]
-      },
-      "training1": {
-        "type": "markdown",
-        "path": "a3-boston-celtics/assets/training.md",
-        "response": []
       },
   
       "bar-chart-1": {
@@ -676,20 +671,6 @@
         "correctAnswer": [{ "id": "cm-response", "answer": 14 }]
       },
   
-      "stacked-bar-chart-1": {
-        "baseComponent": "stackedBarChart",
-        "parameters": {
-          "data": [
-            { "name": "A", "value": "13" },
-            { "name": "B", "value": "42" },
-            { "name": "C", "value": "5" },
-            { "name": "D", "value": "61" },
-            { "name": "E", "value": "25" }
-          ],
-          "selectedIndices": [1, 4]
-        },
-        "correctAnswer": [{ "id": "cm-response", "answer": 60 }]
-      },
       "bubble-chart-1": {
         "baseComponent": "bubbleChart",
         "parameters": {
@@ -975,7 +956,6 @@
       "order": "fixed",
       "components": [
         "introduction",
-        "training1",
         {
           "order": "random",
           "components": [
