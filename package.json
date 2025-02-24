@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "homepage": "https://lukegrady1.github.io/study/",
+  "homepage": "/",
   "scripts": {
     "buildDocs": "yarn typedoc",
     "serve": "vite --host=0.0.0.0 --port=8080",
