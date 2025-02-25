@@ -68,7 +68,7 @@
       "bubbleChart": {
         "meta": {
           "difficulty": 5,
-          "chart": "bubble chart"
+          "chart": "Bubble"
         },
         "description": "A bubble chart",
         "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
